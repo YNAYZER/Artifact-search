@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hackathon пошук артефакту</title>
+    <link rel="shortcut icon" href="img/poppy_field.png"><!--підключення картинки біля назви сайту-->
+</head>
+<body>
+    <!--підключення навбара для музики-->
+    <nav class="nav_mp3">
+        <svg id="playButton" class="menu" xmlns="http://www.w3.org/2000/svg"
+        height="50px" viewBox="0 -960 960 960"
+        width="50px" fill="black"><!--svg іконки музики-->
+        <path d="M560-131v-82q90-26 145-100t55-168q0-94-55-168T560-749v-82q124 28 202 125.5T840-481q0 127-78 224.5T560-131ZM120-360v-240h160l200-200v640L280-360H120Zm440 40v-322q47 22 73.5 66t26.5 96q0 51-26.5 94.5T560-320ZM400-606l-86 86H200v80h114l86 86v-252ZM300-480Z"/></svg>
+        <audio id="audioPlayer"src="mp3/backround_music.mp3" loop></audio>    
+    </nav>
+    <section id="scen1" class="home scene active"><!--перша і сама головна сцена-->
+        <h1 class="text">Шлях До Артефакту</h1>
+        <P class="home_text">Ви молодий чарівник, який шукає
+            Стародавню реліквію своєї сімї.
+            Довіртеся своїй магії та зробіть
+             правильний вибір, щоб досягти успіху.</P>
+        <img class="img_size" src="img/Home_screen.png" ><!--зображення сцени-->
+
+    <button data-target="scen2" class="start">ПОЧИНАЙТЕ СВОЮ ПРИГОДУ</button><!--кнопка яка перекидає на наступну сцену-->
+    </section>
+
+    <section id="scen2" class="scene">
+        <img class="img_size" src="img/maps.png" >
+
+        <img class="background_txt_Storyteller_maps" src="img/background_txt_Storyteller.png" alt=""><!--бґраунд для тексту оповідача-->
+        <p class="fade-text_Storyteller_maps">Після довгої подорожі наш головний герой натрапив
+            на невелике королівство Драконія, де, за чутками,
+             знаходиться древня реліквія його сім'ї. Цей артефакт
+              здатен подвоїти магічні, фізичні та розумові здібності,
+               і був дуже цінний для родини. Тому Мітяй поклявся своїм близьким,
+                що обов’язково поверне сімейну реліквію.
+       </p><!--Сам текст оповідача-->
+
+        <button data-target="scen3" class="scen-btn">Далі</button>
+    </section>
+
+    <section id="scen3" class="scene">
+        <img class="img_size" src="img/maps.png" >
+        <img class="hero_maps mitaj_maps" src="img/Mitaj.png" alt=""><!--Головний герой Мітяй-->
+        <img class="background_txt_maps" src="img/background_txt.png" alt=""><!--беґраунд для тексту головного героя-->
+        <p class="fade-text_maps">Ох, нарешті я дістався до Драконії! Для початку мені потрібно звернутися до гільдії найманців.</p><!--Текст головного героя-->
+        <button data-target="scen4"  class="scen-btn">Далі</button>
+    </section>
+
+    <section id="scen4" class="scene">
+        <img class="img_size" src="img/maps.png" >
+        <img class="hero_maps mitaj_maps" src="img/Mitaj.png" alt="">
+        <img class="background_txt_maps" src="img/background_txt.png" alt="">
+        <p class="fade-text_maps">Грошей у мене небагато, але самотужки я навряд чи зможу знайти "реліквію". Все-таки я дав обіцянку, що поверну її!
+        </p>
+        <button data-target="scen5" class="scen-btn">Перейти в гільдію найманців</button>
+    </section>
+    <section id="scen5" class="scene">
+        <img class="img_size" src="img/guild_mercenary.png" >
+        <img class="hero mitaj" src="img/Mitaj.png" alt="">
+        <img class="background_txt" src="img/background_txt.png" alt="">
+        <p class="fade-text"> Ох, потрібно подумати, хто б мені міг знадобитися...</p>
+        <button data-target="scen6" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen6" class="scene">
+        <img class="img_size" src="img/guild_mercenary.png" >
+        <img class="hero mitaj" src="img/Mitaj.png" alt="">
+        <img class="background_txt_people" src="img/background_txt.png" alt=""><!--Беґраунд для інших персонажів-->
+        <img class="hero people" src="img/menrdjer.png" alt=""><!--персонажі-->
+        <p class="fade-text_people">Доброго дня! Вам потрібен напарник для подорожі?</p><!--текст персонажів-->
+        <button data-target="scen7" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen7" class="scene">
+        <img class="img_size" src="img/guild_mercenary.png" >
+        <img class="hero mitaj" src="img/Mitaj.png" alt="">
+        <img class="background_txt" src="img/background_txt.png" alt="">
+        <img class="hero people" src="img/menrdjer.png" alt="">
+        <p class="fade-text">Так, мені потрібен напарник.</p>
+        <button data-target="scen8" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen8" class="scene">
+        <img class="img_size" src="img/guild_mercenary.png" >
+        <img class="hero mitaj" src="img/Mitaj.png" alt="">
+        <img class="background_txt_people" src="img/background_txt.png" alt="">
+        <img class="hero people" src="img/menrdjer.png" alt="">
+        <p class="fade-text_people">Чудово! У нас вибір невеликий, але якісний! Ха-ха...</p>
+        <button data-target="scen9" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen9" class="scene">
+        <img class="img_size" src="img/guild_mercenary.png" >
+        <img class="hero mitaj" src="img/Mitaj.png" alt="">
+        <img class="background_txt" src="img/background_txt.png" alt="">
+        <img class="hero people" src="img/menrdjer.png" alt="">
+        <p class="fade-text">....</p><!--Реакція на невдалий жарт менеджера гільдії-->
+        <button data-target="scen10" class="scen-btn">Оглянути кандедатів</button>
+    </section>
+
+    <section id="scen10" class="scene">
+        <img class="img_size" src="img/guild_mercenary.png" >
+        <img class="hero mitaj" src="img/Mitaj.png" alt="">
+        <!--Вибір напарника -->
+        <div class="character">
+        <img class="hero choice hoverable" src="img/Karan.png" alt="" data-target="scen-k1">
+        <div class="character-info info1">
+            <h3>Каран</h3>
+            <p>Роль: Слідопит / убивця</p>
+            <p>Здібності: Невидимість </p>
+            <p>Плюси: Врятує загін у критичні моменти</p>
+            <p>Мінуси: Погано тримає удар, низькй уровень довіри</p>
+        </div>
+        
+        <img class="hero choice1 hoverable" src="img/Sealina.png" alt="" data-target="scen-s1">
+        <<div class="character-info info2">
+            <h3>Саеліна</h3>
+            <p>Роль: зцілення</p>
+            <p>Здібності:Лікування</p>
+            <p>Плюси: Врятує у критичні моменти</p>
+            <p>Мінуси:потребує захисту</p>
+        </div>
+        <img class="hero choice2 hoverable" src="img/Oldar.png" alt="" data-target="scen-o1">
+        <div class="character-info info3">
+            <h3>Олдар</h3>
+            <p>Роль: Танк / захисник</p>
+            <p>Здібності: Щитова стіна, стійкість до статусів</p>
+            <p>Плюси: Висока витривалість, добре тримає удар</p>
+            <p>Мінуси: Повільний, агресивний ,лізе в бійку</p>
+          </div>
+        <button class="scen-btn">Оглянь та вибери одного кандедата</button>
+    </section>
+    <section id="scen-k1" class="scene">
+        <img class="img_size" src="img/guild_mercenary.png" >
+        <img class="hero mitaj" src="img/Mitaj.png" alt="">
+        <img class="background_txt_people" src="img/background_txt.png" alt="">
+        <img class="hero people" src="img/menrdjer.png" alt="">
+        <p class="fade-text_people">О, чудовий вибір! Також можу запропонувати зняти кімнату на ніч — надворі вже пізно.</p>
+        <button data-target="scen-k2" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k2" class="scene">
+        <img class="img_size" src="img/guild_mercenary.png" >
+        <img class="hero mitaj" src="img/Mitaj.png" alt="">
+        <img class="background_txt" src="img/background_txt.png" alt="">
+        <img class="hero people" src="img/menrdjer.png" alt="">
+        <p class="fade-text">Так, було б чудово.</p>
+        <button data-target="scen-k3" class="scen-btn">Зняти кімнату</button>
+    </section>
+    <section id="scen-k3" class="scene">
+        <img class="img_size" src="img/hostel_night.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="background_txt" src="img/background_txt.png" alt="">
+        <p class="fade-text">Так… зараз лягаю спати, а завтра вирушу в на пошуки реліквії.</p>
+        <button data-target="scen-k4" class="scen-btn">Лягнути спати</button>
+    </section>
+    <section id="scen-k4" class="scene">
+        <img class="img_size" src="img/field_fog.png" >
+        <img class="hero people_stalker" src="img/stalker.png" alt="">
+        
+        <p class="fade-text_people">Незнайомиць: Мітяй! МІяй!! МІТЯЙ!!!</p>
+        <button data-target="scen-k5" class="scen-btn">Прокинутись</button>
+    </section>
+    <section id="scen-k5" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+        <p class="fade-text_Storyteller">-Мітяй прокидається в холодному поті</p>
+        <button data-target="scen-k6" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k6" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="background_txt" src="img/background_txt.png" alt="">
+        <p class="fade-text">— АААААааааа… Що це було? Навіть мурашки по шкірі…</p>
+        <button data-target="scen-k7" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k7" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_karan" src="img/Karan.png" alt="">
+        <img class="background_txt_people" src="img/background_txt.png" alt="">
+        <p class="fade-text_people">— Доброго ранку. Я дізнався, де може бути твоя сімейна реліквія, чи артефакт.</p>
+        <button data-target="scen-k8" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k8" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_karan" src="img/Karan.png" alt="">
+        <img class="background_txt" src="img/background_txt.png" alt="">
+        <p class="fade-text">— Артефакт? Стоп… що ти тут робиш?</p>
+        <button data-target="scen-k9" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k9" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_karan" src="img/Karan.png" alt="">
+        <img class="background_txt_people" src="img/background_txt.png" alt="">
+        <p class="fade-text_people">— Двері були відчинені, і ти так кричав вночі, що мене попросили приглянути за тобою.</p>
+        <button data-target="scen-k10" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k10" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_karan" src="img/Karan.png" alt="">
+        <img class="background_txt" src="img/background_txt.png" alt="">
+        <p class="fade-text"> А, пробач… А ти щось зрозумів із тих криків?</p>
+        <button data-target="scen-k11" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k11" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_karan" src="img/Karan.png" alt="">
+        <img class="background_txt_people" src="img/background_txt.png" alt="">
+        <p class="fade-text_people"> Зазвичай ти просто кричав, але іноді говорив, що мусиш знайти якийсь артефакт..</p>
+        <button data-target="scen-k12" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k12" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_karan" src="img/Karan.png" alt="">
+        <img class="background_txt" src="img/background_txt.png" alt="">
+        <p class="fade-text">окей.Ти щось казав про те, що дізнався де моя реліквія?</p>
+        <button data-target="scen-k13" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k13" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_karan" src="img/Karan.png" alt="">
+        <img class="background_txt_people" src="img/background_txt.png" alt="">
+        <p class="fade-text_people">Так, вона у печері біля міста. Її використовує місцева банда.</p>
+        <button data-target="scen-k14" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k14" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_karan" src="img/Karan.png" alt="">
+        <img class="background_txt" src="img/background_txt.png" alt="">
+        <p class="fade-text">Окей, тоді вирушаємо.</p>
+        <button data-target="scen-k15" class="scen-btn">Далі</button> 
+    </section>
+    <section id="scen-k15" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_karan" src="img/Karan.png" alt="">
+        <img class="background_txt_people" src="img/background_txt.png" alt="">
+        <p class="fade-text_people">Я все розумію, але ти шо — малий пі… пінопласт?</p>
+        <button data-target="scen-k16" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k16" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_karan" src="img/Karan.png" alt="">
+        <img class="background_txt" src="img/background_txt.png" alt="">
+        <p class="fade-text">Та що вже таке?</p>
+        <button data-target="scen-k17" class="scen-btn">Далі</button> 
+    </section>
+    <section id="scen-k17" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_karan" src="img/Karan.png" alt="">
+        <img class="background_txt_people" src="img/background_txt.png" alt="">
+        <p class="fade-text_people">Ти хочеш, щоб нас прибили?! Ми вирушаємо під вечір — і крапка!</p>
+        <button data-target="scen-k18" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k18" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_karan" src="img/Karan.png" alt="">
+        <img class="background_txt" src="img/background_txt.png" alt="">
+        <p class="fade-text">Окей-окей, не кипішуй…</p>
+        <button data-target="scen-k19" class="scen-btn">Дочекатися вечора і піти за реліквію</button> 
+    </section>
+    <section id="scen-k19" class="scene">
+        <img class="img_size" src="img/near_the_cave.png" >
+        <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+        <p class="fade-text_Storyteller">Мітяй і Каран підкрадаються до входу.</p>
+        <button data-target="scen-k20" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k20" class="scene">
+        <img class="img_size" src="img/near_the_cave.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_karan" src="img/Karan.png" alt="">
+        <img class="background_txt_people" src="img/background_txt.png" alt="">
+        <p class="fade-text_people"> Так, слухай уважно. Я вирубаю охоронців, і ми обережно заходимо. Зрозумів?</p>
+        <button data-target="scen-k21" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k21" class="scene">
+        <img class="img_size" src="img/near_the_cave.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_karan" src="img/Karan.png" alt="">
+        <img class="background_txt" src="img/background_txt.png" alt="">
+        <p class="fade-text">Так, але в печері не буде ще більше бандитів?</p>
+        <button data-target="scen-k22" class="scen-btn">Далі</button> 
+    </section>
+    <section id="scen-k22" class="scene">
+        <img class="img_size" src="img/near_the_cave.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_karan" src="img/Karan.png" alt="">
+        <img class="background_txt_people" src="img/background_txt.png" alt="">
+        <p class="fade-text_people">Ти що, мене не слухав? Підвечір вони виходять на полювання, повернуться через три години.</p>
+        <button data-target="scen-k23" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k23" class="scene">
+        <img class="img_size" src="img/near_the_cave.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_karan" src="img/Karan.png" alt="">
+        <img class="background_txt" src="img/background_txt.png" alt="">
+        <p class="fade-text">Пам’ятаю… але вирішив перепитати.</p>
+        <button data-target="scen-k24" class="scen-btn">Далі</button> 
+    </section>
+    <section id="scen-k24" class="scene">
+        <img class="img_size" src="img/near_the_cave.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_karan" src="img/Karan.png" alt="">
+        <img class="background_txt_people" src="img/background_txt.png" alt="">
+        <p class="fade-text_people">Все, починаємо.</p>
+        <button data-target="scen-k25" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k25" class="scene">
+        <img class="img_size" src="img/near_the_cave_Karan.png" >
+        <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+        <p class="fade-text_Storyteller">Каран тихо вирубує двох охоронців. І Каран з Мітяйом входять у печеру.</p>
+        <button data-target="scen-k26" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k26" class="scene">
+        <img class="img_size" src="img/near_the_cave_Karan.png" >
+        <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+        <p class="fade-text_Storyteller">Каран:Швидко шукай артефакт і тікаємо.</p>
+        <button data-target="scen-k27" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k27" class="scene">
+        <img class="img_size" src="img/Artefact.png" >
+        <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+        <p class="fade-text_Storyteller">Мітяй у поту шукає реліквію. Нарешті знаходить — це картина з золотою рамою, що випромінює ману. Але раптом…</p>
+        <button data-target="scen-k28" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k28" class="scene">
+        <img class="img_size" src="img/mac.png" >
+        <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+        <p class="fade-text_Storyteller">Мітяй:що це квітка?.. Мак?</p>
+        <button data-target="scen-k29" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k29" class="scene">
+        <img class="img_size" src="img/mac.png" >
+        <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+        <p class="fade-text_Storyteller">Під скляним куполом росте дивовижна червона квітка з чорною серединкою. Вона викликає сонливість.</p>
+        <button data-target="scen-k30" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k30" class="scene">
+        <img class="img_size" src="img/mac.png" >
+        <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+        <p class="fade-text_Storyteller">Крик Карана: ДАВАЙ ШВИДШЕ! ВОНИ НА ПІДХОДІ!</p>
+        <button data-target="scen-k1-1" class="scen-btn">Забрати квітку</button>
+        <button data-target="scen-k2-1" class="scen-btn">Втекти без квітки</button>
+    </section>
+    <section id="scen-k1-1" class="scene">
+        <img class="img_size" src="/img/Seepy_poppy.png" >
+        <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+        <p class="fade-text_Storyteller">Мітяй бере мак — його миттєво вирубає. </p>
+        <button data-target="scen-k1-2" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k1-2" class="scene">
+        <img class="img_size" src="img/poppy_field.png" >
+        <img class="hero people_stalker" src="img/stalker.png" alt="">
+        <p class="fade-text_people">Незнайомиць: Мітяй! Вставай! Вставай!</p>
+        <button data-target="scen-k1-3" class="scen-btn">Відкликнутись на голос</button>
+        <button data-target="scen-k1-3-1" class="scen-btn">Не відкликнутись на голос</button>
+    </section>
+    <section id="scen-k1-3" class="scene">
+        <img class="img_size" src="img/poppy_field1.png" >
+        <img class="hero people_Artem" src="img/Artem.png" alt="">
+        <img class="hero real_mitaj" src="img/real_mitaj.png" alt="">
+        <p class="fade-text_people">Незнайомиць:Фух, нарешті ти прокинувся. Я вже думав, що ти не жилець.</p>
+        <button data-target="scen-k1-4" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k1-4" class="scene">
+        <img class="img_size" src="img/poppy_field1.png" >
+        <img class="hero people_Artem" src="img/Artem.png" alt="">
+        <img class="hero real_mitaj" src="img/real_mitaj.png" alt="">
+        <p class="fade-text">Мітяй:Ти хто? І чому мене знаєш?</p>
+        <button data-target="scen-k1-5" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k1-5" class="scene">
+        <img class="img_size" src="img/poppy_field1.png" >
+        <img class="hero people_Artem" src="img/Artem.png" alt="">
+        <img class="hero real_mitaj" src="img/real_mitaj.png" alt="">
+        <p class="fade-text_people">Артем: Мітя, це ж я — Артем, твій напарник. Ти що, зовсім усе забув?</p>
+        <button data-target="scen-k1-6" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k1-6" class="scene">
+        <img class="img_size" src="img/poppy_field1.png" >
+        <img class="hero people_Artem" src="img/Artem.png" alt="">
+        <img class="hero real_mitaj" src="img/real_mitaj.png" alt="">
+        <p class="fade-text">Мітяй:Нічогісінько… не памятаю</p>
+        <button data-target="scen-k1-7" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k1-7" class="scene">
+        <img class="img_size" src="img/poppy_field1.png" >
+        <img class="hero people_Artem" src="img/Artem.png" alt="">
+        <img class="hero real_mitaj" src="img/real_mitaj.png" alt="">
+        <p class="fade-text_people">Артем:Нічого, ми це швидко виправимо.</p>
+        <button data-target="scen-k1-8" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k1-8" class="scene">
+        <img class="img_size" src="img/poppy_field1.png" >
+        <p class="fade-text_Storyteller">Виявилось, що Мітяй заснув на маковому полі. Усе його «магічне» життя було сном — 25 років у світі фантазії пройшли за 10 хвилин у реальності. З часом Мітяй звик до звичайного життя і став ученим НДІЧАЗУ. Але назавжди залишив у серці спогади про той інший світ.</p>
+        <button data-target="scen1" class="scen-btn">Кінець</button>
+    </section>
+    <section id="scen-k1-3-1" class="scene">
+        <img class="img_size" src="img/cave_bandits.png" >
+        <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+        <p class="fade-text_Storyteller">Мітяй прокидається. Його оточують бандити, посеред них — Каран.</p>
+        <button data-target="scen-k1-3-2" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k1-3-2" class="scene">
+        <img class="img_size" src="img/cave_bandits.png" >
+        <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+        <p class="fade-text_Storyteller">Каран:Вибач, друже, мені просто заплатили більше. Це бізнес.</p>
+        <button data-target="scen-k1-3-3" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k1-3-3" class="scene">
+        <img class="img_size" src="img/cave_bandits.png" >
+        <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+        <p class="fade-text_Storyteller">Мітяй: Зрадник… Я це так не залишу!</p>
+        <button data-target="scen-k1-3-4" class="scen-btn">Використати сімейну реліквію</button>
+    </section>
+    <section id="scen-k1-3-4" class="scene">
+        <img class="img_size" src="img/cave_bandits1.png" >
+        <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+        <p class="fade-text_Storyteller">Мітяй активує сімейну реліквію. Швидкість + Вогняна куля — і він тікає.</p>
+        <button data-target="scen-k1-3-5" class="scen-btn">далі</button>
+    </section>
+    <section id="scen-k1-3-5" class="scene">
+        <img class="img_size" src="img/terrible_dreams.png" >
+        <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+        <p class="fade-text_Storyteller">Повертається до родини. Але нічні жахіття не дають йому спокою. Він шкодує лише про одне — що не відкликнувся на голос...</p>
+        <button data-target="scen1" class="scen-btn">Кінець</button>
+    </section>
+    <script type="module" src="index.js"></script> 
+    <section id="scen-k2-1" class="scene">
+        <img class="img_size" src="img/cave_bandits.png" >
+        <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+        <p class="fade-text_Storyteller">Мітяй тікає. Біля виходу — Каран і 50 бандитів.</p>
+        <button data-target="scen-k2-2" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k2-2" class="scene">
+        <img class="img_size" src="img/cave_bandits.png" >
+        <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+        <p class="fade-text_Storyteller">Каран:Вибач, друже, мені просто заплатили більше. Це бізнес.</p>
+        <button data-target="scen-k2-3" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-k2-3" class="scene">
+        <img class="img_size" src="img/cave_bandits.png" >
+        <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+        <p class="fade-text_Storyteller">Мітяй: Зрадник… Я це так не залишу!</p>
+        <button data-target="scen-k2-4" class="scen-btn">Використати сімейну реліквію</button>
+    </section>
+    <section id="scen-k2-4" class="scene">
+        <img class="img_size" src="img/cave_bandits1.png" >
+        <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+        <p class="fade-text_Storyteller">Мітяй активує сімейну реліквію. Швидкість + Вогняна куля — і він тікає.</p>
+        <button data-target="scen-k2-5" class="scen-btn">далі</button>
+    </section>
+    <section id="scen-k2-5" class="scene">
+        <img class="img_size" src="img/terrible_dreams.png" >
+        <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+        <p class="fade-text_Storyteller">Повертається до родини. Але нічні жахіття не дають йому спокою. Він шкодує лише про одне — що не взяв мак в той день</p>
+        <button data-target="scen1" class="scen-btn">Кінець</button>
+    </section>
+
+    <!--Сюжет із сеаліною-->
+    <section id="scen-s1" class="scene">
+        <img class="img_size" src="img/guild_mercenary.png" >
+        <img class="hero mitaj" src="img/Mitaj.png" alt="">
+        <img class="background_txt_people" src="img/background_txt.png" alt="">
+        <img class="hero people" src="img/menrdjer.png" alt="">
+        <p class="fade-text_people">О, чудовий вибір! Також можу запропонувати зняти кімнату на ніч — надворі вже пізно.</p>
+        <button data-target="scen-s2" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-s2" class="scene">
+        <img class="img_size" src="img/guild_mercenary.png" >
+        <img class="hero mitaj" src="img/Mitaj.png" alt="">
+        <img class="background_txt" src="img/background_txt.png" alt="">
+        <img class="hero people" src="img/menrdjer.png" alt="">
+        <p class="fade-text">Так, було б чудово.</p>
+        <button data-target="scen-s3" class="scen-btn">Зняти кімнату</button>
+    </section>
+    <section id="scen-s3" class="scene">
+        <img class="img_size" src="img/hostel_night.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="background_txt" src="img/background_txt.png" alt="">
+        <p class="fade-text">Так… зараз лягаю спати, а завтра вирушу в на пошуки реліквії.</p>
+        <button data-target="scen-s4" class="scen-btn">Лягнути спати</button>
+    </section>
+    <section id="scen-s4" class="scene">
+        <img class="img_size" src="img/field_fog.png" >
+        <img class="hero people_stalker" src="img/stalker.png" alt="">
+        
+        <p class="fade-text_people">Незнайомиць: Мітяй! МІяй!! МІТЯЙ!!!</p>
+        <button data-target="scen-s5" class="scen-btn">Прокинутись</button>
+    </section>
+    <section id="scen-s5" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+        <p class="fade-text_Storyteller">-Мітяй прокидається в холодному поті</p>
+        <button data-target="scen-s6" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-s6" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="background_txt" src="img/background_txt.png" alt="">
+        <p class="fade-text">— АААААааааа… Що це було? Навіть мурашки по шкірі…</p>
+        <button data-target="scen-s7" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-s7" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_sealin" src="img/Sealin.png" alt="">
+        <img class="background_txt_people" src="img/background_txt.png" alt="">
+        <p class="fade-text_people">Доброго ранку то сьогодні йдемо шукати твою сімейну реліквію чи артефакт?</p>
+        <button data-target="scen-s8" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-s8" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_sealin" src="img/Sealin.png" alt="">
+        <img class="background_txt" src="img/background_txt.png" alt="">
+        <p class="fade-text">Артефект? Стоп що ти тут робиш?</p>
+        <button data-target="scen-s9" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-s9" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_sealin" src="img/Sealin.png" alt="">
+        <img class="background_txt_people" src="img/background_txt.png" alt="">
+        <p class="fade-text_people">Двері були відчинені і ти так в ночі викрикав що мене попросили послідкувати за тобою.</p>
+        <button data-target="scen-s10" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-s10" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_sealin" src="img/Sealin.png" alt="">
+        <img class="background_txt" src="img/background_txt.png" alt="">
+        <p class="fade-text"> А, пробач… А ти щось зрозуміла із тих криків?</p>
+        <button data-target="scen-s11" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-s11" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_sealin" src="img/Sealin.png" alt="">
+        <img class="background_txt_people" src="img/background_txt.png" alt="">
+        <p class="fade-text_people">Ти зазвичай просто кричав але деколи ти просто казав що мусиш знайти якись артефакт.</p>
+        <button data-target="scen-s12" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-s12" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_sealin" src="img/Sealin.png" alt="">
+        <img class="background_txt" src="img/background_txt.png" alt="">
+        <p class="fade-text">Окей дякую що прегледіла за мною.</p>
+        <button data-target="scen-s13" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-s13" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_sealin" src="img/Sealin.png" alt="">
+        <img class="background_txt_people" src="img/background_txt.png" alt="">
+        <p class="fade-text_people">Нема защо то як вирушаємо на пошук інформації?</p>
+        <button data-target="scen-s14" class="scen-btn">Далі</button>
+    </section>
+    <section id="scen-s14" class="scene">
+        <img class="img_size" src="img/hostel_dey.png" >
+        <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+        <img class="hero people_sealin" src="img/Sealin.png" alt="">
+        <img class="background_txt" src="img/background_txt.png" alt="">
+        <p class="fade-text">Так пішли.</p>
+        <button data-target="scen-s15" class="scen-btn">Далі</button> 
+    </section>
+        <section id="scen-s15" class="scene">
+            <img class="img_size" src="img/near_the_cave.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Після довгих пошуків ви наткнулись на печеру розбійників які по чуткам володіють цінними реліквіями на продажу </p>
+            <button data-target="scen-s16" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-s16" class="scene">
+            <img class="img_size" src="img/sleep_spell.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">І ви вирішуєте незамітно підкрастись до печери і вирубити двох охороців сонним заклинанням </p>
+            <button data-target="scen-s17" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-s17" class="scene">
+            <img class="img_size" src="img/cave.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Мітяй і Саелін тихенько зайшли в печеру</p>
+            <button data-target="scen-s18" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-s18" class="scene">
+            <img class="img_size" src="img/trap.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Але Мітяй настільки був зосереджений на пошуку реліквії що потрапив в пастку</p>
+            <button data-target="scen-s19" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-s19" class="scene">
+            <img class="img_size" src="img/arrow.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">В нього вистрілила стріла і вбила Мітяя </p>
+            <button data-target="scen-s20" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-s20" class="scene">
+            <img class="img_size" src="img/healing.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Міітяй: А що Яяя… живий?</p>
+            <button data-target="scen-s21" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-s21" class="scene">
+            <img class="img_size" src="img/healing.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Саелін: Та живий звісно було важкувато тебе воскресити але з твоєю сімейною реліквією я змогла це зробити</p>
+            <button data-target="scen-s22" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-s22" class="scene">
+            <img class="img_size" src="img/healing.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Мітяй: Артефакт він в тебе ?</p>
+            <button data-target="scen-s23" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-s23" class="scene">
+            <img class="img_size" src="img/healing.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Саелін: так </p>
+            <button data-target="scen-s24" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-s24" class="scene">
+            <img class="img_size" src="img/healing.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Мітяй: то давай його сюди і побігли звідси </p>
+            <button data-target="scen-s25" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-s25" class="scene">
+            <img class="img_size" src="img/mac.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Але коли Мітяй і Саелін бігли на вихід його зір попадається красива квітка під стікляним куполом з красивими червоними пелюстками і чорною середикною від якої клоне в сон </p>
+            <button data-target="scen-s26" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-s26" class="scene">
+            <img class="img_size" src="img/mac.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Мітяй: цеж мак </p>
+            <button data-target="scen-s27" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-s27" class="scene">
+            <img class="img_size" src="img/mac.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Саелін: Який мак побігли в нас не багато часу</p>
+            <button data-target="scen-s1-1" class="scen-btn">Забрати квітку</button>
+        <button data-target="scen-s2-1" class="scen-btn">Втекти без квітки</button>
+        </section>
+        <section id="scen-s1-1" class="scene">
+            <img class="img_size" src="/img/Seepy_poppy.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Мітяй бере мак — його миттєво вирубає. </p>
+            <button data-target="scen-s1-2" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-s1-2" class="scene">
+            <img class="img_size" src="img/poppy_field.png" >
+            <img class="hero people_stalker" src="img/stalker.png" alt="">
+            <p class="fade-text_people">Незнайомиць: Мітяй! Вставай! Вставай!</p>
+            <button data-target="scen-k1-3" class="scen-btn">Відкликнутись на голос</button>
+            <button data-target="scen-s1-3" class="scen-btn">Не відкликнутись на голос</button>
+        </section>
+        <section id="scen-s1-3" class="scene">
+            <img class="img_size" src="/img/Sealin_banduts.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Мітяй проснувся коли його намагалась розбудити Саелін в печері зі всіх сторін стояли бандити.</p>
+            <button data-target="scen-s1-4" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-s1-4" class="scene">
+            <img class="img_size" src="/img/Sealin_banduts.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Саелін: Нас оточили.</p>
+            <button data-target="scen-s1-5" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-s1-5" class="scene">
+            <img class="img_size" src="/img/Sealin_banduts.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Мітяй: Я бачу! в нас великі проблеми чому ти не втекла?</p>
+            <button data-target="scen-s1-6" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-s1-6" class="scene">
+            <img class="img_size" src="/img/Sealin_banduts.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Мітяй: Не переживай в мене є план</p>
+            <button data-target="scen-s1-7" class="scen-btn">Використати сімейну реліквію</button>
+        </section>
+        <section id="scen-s1-7" class="scene">
+            <img class="img_size" src="/img/sealin_fair.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller"> Вивикористовуючи артефакту Мітяй наклали на себе і Саеліну баф швидкості і вогняну кулю і вони пулею змогли вибратись зі засідки</p>
+            <button data-target="scen-s1-8" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-s1-8" class="scene">
+            <img class="img_size" src="/img/terrible_dreams.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller"> Після цього Мітяй зміг повернутися до родини яка дуже чекала його повернення і була дуже здивована що він знайшов собі дружину але нажаль Мітяя продовжували мучити нічні жахіття і він жаліє кожен день що не відкликнувся на невідомий голос.</p>
+            <button data-target="scen1" class="scen-btn">Кінець</button>
+        </section>
+        <section id="scen-s2-1" class="scene">
+            <img class="img_size" src="/img/ran.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Мітяй послухався Саелін і лишив квітку і побіг до виходу але біля виходу вас чекали близько 50 розбійників .</p>
+            <button data-target="scen-s2-2" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-s2-2" class="scene">
+            <img class="img_size" src="/img/ran1.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Саелін: Нас оточили.</p>
+            <button data-target="scen-s2-3" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-s2-3" class="scene">
+            <img class="img_size" src="/img/ran1.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Мітяй: Я бачу! в нас великі проблеми</p>
+            <button data-target="scen-s2-4" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-s2-4" class="scene">
+            <img class="img_size" src="/img/ran1.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Мітяй: Не переживай в мене є план.</p>
+            <button data-target="scen-s2-5" class="scen-btn">використати сімейну реліквію</button>
+        </section>
+        <section id="scen-s2-5" class="scene">
+            <img class="img_size" src="/img/sealin_fair.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Вивикористовуючи артефакту Мітяй наклали на себе і Саеліну баф швидкості і вогняну кулю і вони пулею змогли вибратись зі засідки.</p>
+            <button data-target="scen-s2-6" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-s2-6" class="scene">
+            <img class="img_size" src="/img/terrible_dreams.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller"> Після цього Мітяй зміг повернутися до родини яка дуже чекала його повернення і була дуже здивована що він знайшов собі дружину але нажаль Мітяя продовжували мучити нічні жахіття і він жаліє кожен день що не відкликнувся на невідомий голос.</p>
+            <button data-target="scen1" class="scen-btn">Кінець</button>
+        </section>
+
+
+
+        <!--Сюжет з Олдаром -->
+        
+        
+        
+        <section id="scen-o1" class="scene">
+            <img class="img_size" src="img/guild_mercenary.png" >
+            <img class="hero mitaj" src="img/Mitaj.png" alt="">
+            <img class="background_txt_people" src="img/background_txt.png" alt="">
+            <img class="hero people" src="img/menrdjer.png" alt="">
+            <p class="fade-text_people">О, чудовий вибір! Також можу запропонувати зняти кімнату на ніч — надворі вже пізно.</p>
+            <button data-target="scen-o2" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-o2" class="scene">
+            <img class="img_size" src="img/guild_mercenary.png" >
+            <img class="hero mitaj" src="img/Mitaj.png" alt="">
+            <img class="background_txt" src="img/background_txt.png" alt="">
+            <img class="hero people" src="img/menrdjer.png" alt="">
+            <p class="fade-text">Так, було б чудово.</p>
+            <button data-target="scen-o3" class="scen-btn">Зняти кімнату</button>
+        </section>
+        <section id="scen-o3" class="scene">
+            <img class="img_size" src="img/hostel_night.png" >
+            <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+            <img class="background_txt" src="img/background_txt.png" alt="">
+            <p class="fade-text">Так… зараз лягаю спати, а завтра вирушу в на пошуки реліквії.</p>
+            <button data-target="scen-o4" class="scen-btn">Лягнути спати</button>
+        </section>
+        <section id="scen-o4" class="scene">
+            <img class="img_size" src="img/field_fog.png" >
+            <img class="hero people_stalker" src="img/stalker.png" alt="">
+            
+            <p class="fade-text_people">Незнайомиць: Мітяй! МІяй!! МІТЯЙ!!!</p>
+            <button data-target="scen-o5" class="scen-btn">Прокинутись</button>
+        </section>
+        <section id="scen-o5" class="scene">
+            <img class="img_size" src="img/hostel_dey.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">-Мітяй прокидається в холодному поті</p>
+            <button data-target="scen-o6" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-o6" class="scene">
+            <img class="img_size" src="img/hostel_dey.png" >
+            <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+            <img class="background_txt" src="img/background_txt.png" alt="">
+            <p class="fade-text">— АААААааааа… Що це було? Навіть мурашки по шкірі…</p>
+            <button data-target="scen-o7" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-o7" class="scene">
+            <img class="img_size" src="img/hostel_dey.png" >
+            <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+            <img class="hero people_oldar" src="img/Oldar.png" alt="">
+            <img class="background_txt_people" src="img/background_txt.png" alt="">
+            <p class="fade-text_people">Шо ти розкричався ?</p>
+            <button data-target="scen-o8" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-o8" class="scene">
+            <img class="img_size" src="img/hostel_dey.png" >
+            <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+            <img class="hero people_oldar" src="img/Oldar.png" alt="">
+            <img class="background_txt" src="img/background_txt.png" alt="">
+            <p class="fade-text">Стоп що ти тут робиш?</p>
+            <button data-target="scen-o9" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-o9" class="scene">
+            <img class="img_size" src="img/hostel_dey.png" >
+            <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+            <img class="hero people_oldar" src="img/Oldar.png" alt="">
+            <img class="background_txt_people" src="img/background_txt.png" alt="">
+            <p class="fade-text_people">Олівер: Так в в тебе двері були відкриті ще ти щось кричав у вісні тож я вирішив зайти і прослідкувати за тобою.</p>
+            <button data-target="scen-o10" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-o10" class="scene">
+            <img class="img_size" src="img/hostel_dey.png" >
+            <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+            <img class="hero people_oldar" src="img/Oldar.png" alt="">
+            <img class="background_txt_people" src="img/background_txt.png" alt="">
+            <p class="fade-text_people">То ми йдем на пошук якогось артефакту ти щось про нього у вісні казав.</p>
+            <button data-target="scen-o11" class="scen-btn">Далі</button>
+        </section>
+        
+        <section id="scen-o11" class="scene">
+            <img class="img_size" src="img/hostel_dey.png" >
+            <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+            <img class="hero people_oldar" src="img/Oldar.png" alt="">
+            <img class="background_txt" src="img/background_txt.png" alt="">
+            <p class="fade-text"> Мітяй: А та це реліквія моєї сімї та і нам треба буде розізнати по тому де може він знаходитись тому ми зараз ідемо на пошук інформації </p>
+            <button data-target="scen-o12" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-o12" class="scene">
+            <img class="img_size" src="img/hostel_dey.png" >
+            <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+            <img class="hero people_oldar" src="img/Oldar.png" alt="">
+            <img class="background_txt_people" src="img/background_txt.png" alt="">
+            <p class="fade-text_people">Ну окей але я нічого розізнавати не збирають будеш її сам шукати.</p>
+            <button data-target="scen-o13" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-o13" class="scene">
+            <img class="img_size" src="img/hostel_dey.png" >
+            <img class="hero mitaj_hostel" src="img/Mitaj.png" alt="">
+            <img class="hero people_oldar" src="img/Oldar.png" alt="">
+            <img class="background_txt" src="img/background_txt.png" alt="">
+            <p class="fade-text">Окей окей тільки не кіпішуй.</p>
+            <button data-target="scen-o14" class="scen-btn">Далі</button>
+        </section>
+
+        <section id="scen-o14" class="scene">
+            <img class="img_size" src="img/near_the_cave.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Після довгих пошуків ви наткнулись на печеру розбійників які по чуткам володіють цінними реліквіями на продажу </p>
+            <button data-target="scen-o15" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-o15" class="scene">
+            <img class="img_size" src="img/Oldar_banduts.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">І Олдар незамітно для охоронців підбіг і поклав їх в нокаут.</p>
+            <button data-target="scen-o16" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-o16" class="scene">
+            <img class="img_size" src="img/oldar_artefakt.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Мітяй з Олдаром починає шукати сімейну реліквію і знаходе її це красива картина зі золотими рамками які відають манною.</p>
+            <button data-target="scen-o17" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-o17" class="scene">
+            <img class="img_size" src="img/mac.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Але коли Мітяй вже збирався йти до виходу то в його зір попадається красива квітка під стікляним куполом з красивими червоними пелюстками і чорною середикною в середині від якої клоне в сон.</p>    
+            <button data-target="scen-o1-1" class="scen-btn">Забрати квітку</button>
+            <button data-target="scen-o2-1" class="scen-btn">Втекти без квітки</button>
+        </section>
+        <section id="scen-o1-1" class="scene">
+            <img class="img_size" src="/img/Seepy_poppy.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Мітяй бере мак — його миттєво вирубає. </p>
+            <button data-target="scen-o1-2" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-o1-2" class="scene">
+            <img class="img_size" src="img/poppy_field.png" >
+            <img class="hero people_stalker" src="img/stalker.png" alt="">
+            <p class="fade-text_people">Незнайомиць: Мітяй! Вставай! Вставай!</p>
+            <button data-target="scen-k1-3" class="scen-btn">Відкликнутись на голос</button>
+            <button data-target="scen-o1-3" class="scen-btn">Не відкликнутись на голос</button>
+        </section>
+        <section id="scen-o1-3" class="scene">
+            <img class="img_size" src="/img/oldar_bandito.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Мітяй проснувся в печері зі всіх сторін стояли бандити і біля них стояв Олдар готовий напасти на них в любу сикунду.</p>
+            <button data-target="scen-o1-4" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-o1-4" class="scene">
+            <img class="img_size" src="/img/oldar_bandito.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Олдар: Ну нарешті ти проснувся тут якрас весілуха починається</p>
+            <button data-target="scen-o1-5" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-o1-5" class="scene">
+            <img class="img_size" src="/img/oldar_bandito.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Мітяй: Що це було? Стоп зараз не час про це думати треба розібратись з бандитами .</p>
+            <button data-target="scen-o1-6" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-o1-6" class="scene">
+            <img class="img_size" src="/img/oldar_bandito.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Олдар: Оце я розумію настрой .</p>
+            <button data-target="scen-o1-7" class="scen-btn">Використати сімейну реліквію</button>
+        </section>
+        <section id="scen-o1-7" class="scene">
+            <img class="img_size" src="/img/Oldar_fair.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller"> Вивикористовуючи артефакт Мітяй наклали на себе баф швидкості і вогняну кулю якою зміг покласти в нокаут близко половини бандитів а з рештою розібрався Олівер.</p>
+            <button data-target="scen-o1-8" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-o1-8" class="scene">
+            <img class="img_size" src="/img/terrible_dreams.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">  І після цього Мітяй зміх повернутися до родини яка дуже чекала його повернення але нажаль Мітяя продовжували мучити нічні жахіття і він жаліє кожен день що не відкликнувся на невідомий голос..</p>
+            <button data-target="scen1" class="scen-btn">Кінець</button>
+        </section>
+        <section id="scen-o2-1" class="scene">
+            <img class="img_size" src="/img/Oldar_2.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Мітяй: звісно квітка гарна але нащо вона мені .</p>
+            <button data-target="scen-o2-2" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-o2-2" class="scene">
+            <img class="img_size" src="/img/Oldar_2.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Виходячи з печери на наших головних героїв чекала засідка .</p>
+            <button data-target="scen-o2-3" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-o2-3" class="scene">
+            <img class="img_size" src="/img/Oldar_2.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Олдар:Опа якрас весілуха підїхала</p>
+            <button data-target="scen-o2-4" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-o2-4" class="scene">
+            <img class="img_size" src="/img/Oldar_2.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Мітяй:Так зараз розберемось з бандитами а далі відмітемо нашу перемогу в таверні.</p>
+            <button data-target="scen-o2-5" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-o2-5" class="scene">
+            <img class="img_size" src="/img/Oldar_2.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">Олдар: Оце я розумію настрой.</p>
+            <button data-target="scen-o2-6" class="scen-btn">Використати сімейну реліквію</button>
+        </section>
+        <section id="scen-o2-6" class="scene">
+            <img class="img_size" src="/img/Oldar_fair.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller"> Вивикористовуючи артефакт Мітяй наклали на себе баф швидкості і вогняну кулю якою зміг покласти в нокаут близко половини бандитів а з рештою розібрався Олівер.</p>
+            <button data-target="scen-o2-7" class="scen-btn">Далі</button>
+        </section>
+        <section id="scen-o2-7" class="scene">
+            <img class="img_size" src="/img/terrible_dreams.png" >
+            <img class="background_txt_Storyteller" src="img/background_txt_Storyteller.png" alt="">
+            <p class="fade-text_Storyteller">  І після цього Мітяй зміх повернутися до родини яка дуже чекала його повернення але нажаль Мітяя продовжували мучити нічні жахіття і він жаліє кожен день що не відкликнувся на невідомий голос.</p>
+            <button data-target="scen1" class="scen-btn">Кінець</button>
+        </section>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
